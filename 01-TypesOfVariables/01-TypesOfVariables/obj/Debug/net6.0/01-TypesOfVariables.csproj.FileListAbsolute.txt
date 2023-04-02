@@ -1,0 +1,15 @@
+D:\Codisa\Curso-Basico-Programacion-Web\01-TypesOfVariables\01-TypesOfVariables\bin\Debug\net6.0\01-TypesOfVariables.exe
+D:\Codisa\Curso-Basico-Programacion-Web\01-TypesOfVariables\01-TypesOfVariables\bin\Debug\net6.0\01-TypesOfVariables.deps.json
+D:\Codisa\Curso-Basico-Programacion-Web\01-TypesOfVariables\01-TypesOfVariables\bin\Debug\net6.0\01-TypesOfVariables.runtimeconfig.json
+D:\Codisa\Curso-Basico-Programacion-Web\01-TypesOfVariables\01-TypesOfVariables\bin\Debug\net6.0\01-TypesOfVariables.dll
+D:\Codisa\Curso-Basico-Programacion-Web\01-TypesOfVariables\01-TypesOfVariables\bin\Debug\net6.0\01-TypesOfVariables.pdb
+D:\Codisa\Curso-Basico-Programacion-Web\01-TypesOfVariables\01-TypesOfVariables\obj\Debug\net6.0\01-TypesOfVariables.csproj.AssemblyReference.cache
+D:\Codisa\Curso-Basico-Programacion-Web\01-TypesOfVariables\01-TypesOfVariables\obj\Debug\net6.0\01-TypesOfVariables.GeneratedMSBuildEditorConfig.editorconfig
+D:\Codisa\Curso-Basico-Programacion-Web\01-TypesOfVariables\01-TypesOfVariables\obj\Debug\net6.0\01-TypesOfVariables.AssemblyInfoInputs.cache
+D:\Codisa\Curso-Basico-Programacion-Web\01-TypesOfVariables\01-TypesOfVariables\obj\Debug\net6.0\01-TypesOfVariables.AssemblyInfo.cs
+D:\Codisa\Curso-Basico-Programacion-Web\01-TypesOfVariables\01-TypesOfVariables\obj\Debug\net6.0\01-TypesOfVariables.csproj.CoreCompileInputs.cache
+D:\Codisa\Curso-Basico-Programacion-Web\01-TypesOfVariables\01-TypesOfVariables\obj\Debug\net6.0\01-TypesOfVariables.dll
+D:\Codisa\Curso-Basico-Programacion-Web\01-TypesOfVariables\01-TypesOfVariables\obj\Debug\net6.0\refint\01-TypesOfVariables.dll
+D:\Codisa\Curso-Basico-Programacion-Web\01-TypesOfVariables\01-TypesOfVariables\obj\Debug\net6.0\01-TypesOfVariables.pdb
+D:\Codisa\Curso-Basico-Programacion-Web\01-TypesOfVariables\01-TypesOfVariables\obj\Debug\net6.0\01-TypesOfVariables.genruntimeconfig.cache
+D:\Codisa\Curso-Basico-Programacion-Web\01-TypesOfVariables\01-TypesOfVariables\obj\Debug\net6.0\ref\01-TypesOfVariables.dll
