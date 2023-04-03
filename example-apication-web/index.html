@@ -1,18 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<title>TODO List</title>
-		<link rel="stylesheet" type="text/css" href="style.css" />
+		<title>Poke App</title>
+		<!-- Styles -->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		/>
+		<link rel="stylesheet" href="styles.css" />
 	</head>
 	<body>
-		<h1>TODO List</h1>
-		<div id="list">
-			<input type="text" id="new-item" placeholder="Add a new item" />
-			<button id="add-btn">Add</button>
-			<ul id="items"></ul>
-			<button id="remove-btn">Remove completed</button>
+		<div class="container">
+			<h1 class="text-center mb-4">Poke App</h1>
+			<div class="row">
+				<div class="col-md-6 offset-md-3">
+					<form>
+						<div class="form-group">
+							<label for="pokemon-name">Enter a Pokemon name:</label>
+							<input
+								type="text"
+								class="form-control"
+								id="pokemon-name"
+								placeholder="e.g. Pikachu"
+							/>
+						</div>
+						<button type="submit" class="btn btn-primary">Search</button>
+					</form>
+					<div class="pokemon-card mt-4">
+						<div class="pokemon-image">
+							<img src="" alt="Pokemon Image" id="pokemon-image" />
+						</div>
+						<div class="pokemon-info">
+							<h2 id="pokemon-name-info"></h2>
+							<ul class="list-group">
+								<li class="list-group-item" id="pokemon-type"></li>
+								<li class="list-group-item" id="pokemon-ability"></li>
+								<li class="list-group-item" id="pokemon-height"></li>
+								<li class="list-group-item" id="pokemon-weight"></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
+
+		<!-- Scripts -->
 		<script src="app.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<script src="poke.js"></script>
 	</body>
 </html>
