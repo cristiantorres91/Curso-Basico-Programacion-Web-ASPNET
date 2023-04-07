@@ -1,0 +1,27 @@
+﻿@page
+@using System.Globalization;
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!-- Bloques de instrucciones individuales -->
+@{
+    var name = "Pedro";
+}
+@{
+    var myMessage = "Hello World";
+}
+
+<!-- Expresiones en línea -->
+<p>El valor de la variable name es: @name</p>
+<p>El valor de la variable myMessage es: @myMessage</p>
+
+<!-- Bloque de varias declaraciones -->
+@{
+    var greeting = "Bienvenido a nuestra aplicación web!";
+    CultureInfo culture = new CultureInfo("es-SV");
+    var weekDay = culture.DateTimeFormat.GetDayName(DateTime.Now.DayOfWeek);
+    var greetingMessage = $"{greeting} Hoy es {weekDay}";
+}
+<p>El saludo es: @greetingMessage</p>
