@@ -1,0 +1,32 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<form class="row g-3 mt-4" method="post">
+    <div class="form-group row">
+        <div class="col-lg-6">
+            <label asp-for="Name" class="form-label">Nombre</label>
+            <input type="text" class="form-control" asp-for="Name" >
+        </div>
+        <div class="col-lg-6">
+            <label asp-for="Age" class="form-label">Edad</label>
+            <input type="number" class="form-control" asp-for="Age" >
+        </div>            
+    </div>
+    <div class="col-12">
+        <button class="btn btn-primary" type="submit">Procesar</button>
+    </div>
+</form>
+
+@if(Request.Method == "POST")
+{
+    if (Model.IsAdult)
+    {
+        <h1>@Model.Name eres mayor de edad</h1>
+    }
+    else
+    {
+        <h1>@Model.Name no eres mayor de edad</h1>
+    }
+}
