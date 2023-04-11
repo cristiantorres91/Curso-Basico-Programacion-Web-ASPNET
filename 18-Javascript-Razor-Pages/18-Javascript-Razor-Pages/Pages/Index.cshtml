@@ -1,0 +1,26 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<button class="btn btn-primary" id="btnHello">Saludar</button>
+<button class="btn btn-secondary" onclick="hello()">Saludar</button>
+
+@section Scripts {
+    <script>
+
+        let name = '@Html.Raw(@Model.Name)';
+
+        const button = document.getElementById("btnHello");
+
+        button.addEventListener("click", function () {
+            alert("Hola " + name);
+        });
+
+        function hello() {
+            alert("Hola " + name);
+
+        }
+    </script>
+}
