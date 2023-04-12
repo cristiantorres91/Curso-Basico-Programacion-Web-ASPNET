@@ -1,0 +1,32 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">AJAX</h1>
+</div>
+<button class="btn btn-success" id="btnData">Obtener datos</button>
+<div class="pt-4" id="result"></div>
+
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#btnData').click(function () {
+                let uri = '@Url.Page("./Index")';
+                uri = uri + "?handler=Data";
+
+                $.ajax({
+                    url: uri,
+                    type: 'GET',
+                }).done(function (response) {
+                    $('#result').text('Nombre: ' + response.name + ', Edad: ' + response.age);
+                }).fail(function (response) {
+                    alert(response.responseText);
+                });
+            });
+        });
+    </script>
+}

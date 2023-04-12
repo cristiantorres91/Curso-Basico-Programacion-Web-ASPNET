@@ -1,0 +1,67 @@
+﻿@page
+@model PrivacyModel
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<div class="text-center">
+    <h1 class="display-4">AJAX 2</h1>
+</div>
+
+<form class="row g-3 mt-4">
+
+    <div class="form-group row">
+        <div class="col-lg-4">
+            <label class="form-label">Número 1:</label>
+            <input type="number" class="form-control" asp-for="Num1" />
+        </div>
+        <div class="col-lg-4">
+            <label class="form-label">Operación:</label>
+            <select class="form-select" asp-for="Operation">
+                <option value="+">Suma (+)</option>
+                <option value="-">Resta (-)</option>
+                <option value="*">Multiplicación (*)</option>
+                <option value="/">División (/)</option>
+            </select>
+        </div>
+        <div class="col-lg-4">
+            <label class="form-label">Número 2:</label>
+            <input type="number" class="form-control" asp-for="Num2" />
+
+        </div>
+    </div>
+    <div class="col-12">
+        <button class="btn btn-primary" id="btnCalculate">Calcular</button>
+    </div>
+    <div class="pt-4" id="result"></div>
+</form>
+
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#btnCalculate').click(function (event) {
+                event.preventDefault();
+                let uri = '@Url.Page("./Privacy")';
+                uri = uri + "?handler=Result";
+
+                let num1 = $('#Num1').val();
+                let num2 = $('#Num2').val();
+                let operation = $('#Operation').val();
+
+                $.ajax({
+                    url: uri,
+                    type: 'GET',
+                    data: {
+                        num1,
+                        num2,
+                        operation,
+                    },
+                }).done(function (response) {
+                    $('#result').text(response);
+                }).fail(function (response) {
+                    alert(response.responseText);
+                });
+            });
+        });
+    </script>
+}

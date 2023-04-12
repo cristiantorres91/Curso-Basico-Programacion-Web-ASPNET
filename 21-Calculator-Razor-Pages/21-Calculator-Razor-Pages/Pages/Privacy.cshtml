@@ -16,7 +16,7 @@
         </div>
         <div class="col-lg-4">
             <label class="form-label">Operación:</label>
-            <select class="form-control" asp-for="SelectedOperation">
+            <select class="form-select" asp-for="SelectedOperation">
                 @foreach (var option in Model.Operation)
                 {
                     <option value="@option.Id">@option.Description</option>
