@@ -1,0 +1,39 @@
+﻿@page
+@model PrivacyModel
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<div class="text-center">
+    <h1 class="display-4">Vistas Parciales 2</h1>
+</div>
+<h1>Producto 1</h1>
+
+<p>Descripción del producto</p>
+
+<button class="btn btn-outline-secondary" id="btnComments">Ver comentarios</button>
+
+<div id="comments">
+    @* la vista parcial se cargará de forma asíncrona, lo que mejorará el rendimiento de la página.*@
+    @await Html.PartialAsync("_CommentsProduct", Model.Comments)
+</div>
+
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#btnComments').click(function () {
+                let uri = '@Url.Page("./Privacy")';
+                uri = uri + "?handler=Comments";
+
+                $.ajax({
+                    url: uri,
+                    type: 'GET',
+                }).done(function (response) {
+                    $("#comments").html(response);
+                }).fail(function (response) {
+                    alert(response.responseText);
+                });
+            });
+        });
+    </script>
+}
