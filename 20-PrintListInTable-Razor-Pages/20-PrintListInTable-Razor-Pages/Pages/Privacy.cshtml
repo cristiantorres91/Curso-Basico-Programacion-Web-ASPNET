@@ -1,0 +1,45 @@
+﻿@page
+@model PrivacyModel
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<div class="text-center">
+    <h1 class="display-4">Listado de Personas 2</h1>
+</div>
+
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Edad</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Aquí se agregarán las filas de datos de las personas -->
+        @foreach (var persona in Model.Persons)
+        {
+            <tr data-id="@persona.Id">
+                <td>@persona.Id</td>
+                <td>@persona.Name</td>
+                <td>@persona.LastName</td>
+                <td>@persona.Age</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+
+    <script>
+        $(document).ready(function () {
+            // Seleccionar todas las filas de la tabla
+            $('tr').click(function () {
+                // Obtener el ID de la persona de la fila seleccionada
+                let id = $(this).data('id');
+                alert(`Id seleccionado ${id}`)
+            });
+        });
+    </script>
+}

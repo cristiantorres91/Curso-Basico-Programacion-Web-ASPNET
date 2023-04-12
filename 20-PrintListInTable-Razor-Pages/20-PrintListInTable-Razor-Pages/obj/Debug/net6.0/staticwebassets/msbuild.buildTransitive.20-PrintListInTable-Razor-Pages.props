@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\20-PrintListInTable-Razor-Pages.props" />
+</Project>
