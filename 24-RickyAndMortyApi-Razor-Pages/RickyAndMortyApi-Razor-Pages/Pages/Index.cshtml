@@ -1,0 +1,31 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Personajes de Rick and Morty</h1>
+</div>
+
+
+<div class="row">
+    @foreach (var character in Model.Characters)
+    {
+        <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="card">
+                <img src="@character.ImageUrl" class="card-img-top" alt="@character.Name">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <a asp-page="./Details" asp-route-id="@character.Id">@character.Name</a>
+                    </h5>
+                    <p class="card-text">
+                        <strong>Especie:</strong> @character.Species<br />
+                        <strong>Estado:</strong> @character.Status
+                    </p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+

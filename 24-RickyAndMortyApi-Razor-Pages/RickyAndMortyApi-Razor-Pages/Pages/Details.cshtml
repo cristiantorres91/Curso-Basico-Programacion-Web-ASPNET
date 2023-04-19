@@ -1,0 +1,20 @@
+﻿@page
+@model RickyAndMortyApi_Razor_Pages.Pages.DetailsModel
+@{
+}
+<div class="text-center">
+    <h1 class="display-4">@Model.Character.Name</h1>
+</div>
+
+
+<div class="card">
+    <img src="@Model.Character.ImageUrl" height="500" class="card-img-top" alt="@Model.Character.Name">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Character.Name</h5>
+        <p class="card-text">
+            <strong>Especie:</strong> @Model.Character.Species<br />
+            <strong>Estado:</strong> @Model.Character.Status
+        </p>
+        <a asp-page="./Index">Regresar a la lista</a>
+    </div>
+</div>
