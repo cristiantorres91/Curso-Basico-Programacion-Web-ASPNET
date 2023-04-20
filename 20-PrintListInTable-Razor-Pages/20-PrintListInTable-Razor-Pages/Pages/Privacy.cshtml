@@ -14,6 +14,7 @@
             <th>Nombre</th>
             <th>Apellido</th>
             <th>Edad</th>
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
@@ -25,6 +26,9 @@
                 <td>@persona.Name</td>
                 <td>@persona.LastName</td>
                 <td>@persona.Age</td>
+                <td>
+                    <button class="btn btn-outline-danger" id="btnSelected">Obtener Id</button>
+                </td>
             </tr>
         }
     </tbody>
@@ -38,6 +42,13 @@
             $('tr').click(function () {
                 // Obtener el ID de la persona de la fila seleccionada
                 let id = $(this).data('id');
+                alert(`Id seleccionado ${id}`)
+            });
+
+            //evento click al botón
+            $("#btnSelected").click(function () {
+                // Obtener el ID de la persona de la fila seleccionada
+                let id = $(this).closest("tr").data("id");
                 alert(`Id seleccionado ${id}`)
             });
         });
